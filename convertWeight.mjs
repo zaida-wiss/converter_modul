@@ -1,7 +1,5 @@
-export function kgTOg(kg) {
-    return kg *1000;
-}
-
-export function gTOkg(g) {
-    return g /1000;
+export function convert(value, from, to) {
+   if (from === "kg" && to === "g"){
+   return value *1000;}
+   else return value /1000;
 }
