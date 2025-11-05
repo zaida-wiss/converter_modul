@@ -5,18 +5,27 @@ import {convert as convertTemperature } from "./convertTemperature.mjs";
 const inputLength = document.getElementById("inputLength");
 const inputTemperature = document.getElementById("inputTemperature");
 const inputWeight = document.getElementById("inputWeight");
-
-inputWeight.addEventListener("change", () => {
-    const value =Number(inputWeight.value);
-    console.log(convertWeight(value, "kg", "g"));
-});
+const outputLength = document.getElementById("outputLength");
+const outputTemperature = document.getElementById("outputTemperature");
+const outputWeight = document.getElementById("outputWeight");
 
 inputLength.addEventListener("change", () => {
     const value =Number(inputLength.value);
-    console.log(convertLength(value, "cm", "m"));
+    const result = convertLength(value, "cm", "m");
+    outputLength.textContent = `${value} cm = ${result} m`;
+    console.log(result);
 });
 
 inputTemperature.addEventListener("change", () => {
     const value =Number(inputTemperature.value);
-    console.log(convertTemperature(value, "c", "f"));
+    const result =convertTemperature(value, "c", "f");
+    outputTemperature.textContent = `${value} °c = ${result} °F`;
+    console.log(result);
+});
+
+inputWeight.addEventListener("change", () => {
+    const value =Number(inputWeight.value);
+    const result = convertWeight(value, "kg", "g");
+    outputWeight.textContent = `${value} kg = ${result} g`;
+    console.log(result);
 });
