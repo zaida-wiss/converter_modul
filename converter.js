@@ -11,8 +11,8 @@ const outputWeight = document.getElementById("outputWeight");
 
 inputLength.addEventListener("change", () => {
     const value =Number(inputLength.value);
-    const result = convertLength(value, "cm", "m");
-    outputLength.textContent = `${value} cm = ${result} m`;
+    const result = convertLength(value, "km", "m");
+    outputLength.textContent = `${value} km = ${result} m`;
     console.log(result);
 });
 

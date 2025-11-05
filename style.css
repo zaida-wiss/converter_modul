@@ -1,0 +1,13 @@
+html{
+height: 100%;
+}
+
+body {
+    background: linear-gradient(15deg, #456666, #999999, #7777);   
+}
+#converters {
+    display:flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px;
+}
